@@ -2,23 +2,34 @@
 MEMBUAT MODEL SISTEM REKOMENDASI BUKU DENGAN METODE COLLABORATIVE FILTERING
 
 ## Domain Proyek
-Buku merupakan informasi segala kebutuhan yang diperlukan, dimulai dari iptek, seni budaya, ekonomi, politik, sosial dan pertahanan keamanan dan lain-lain. Upaya membaca buku membuka wawasan dunia intelek sehingga dapat mengubah masa depan serta mencerdaskan akal, pikiran dan iman.Dengan membaca buku, selain pengetahuan akan semakin bertambah, pribadi akan semakin   kaya, yang kesemuannya jelas akan menurunkan efek negatif terhadap anak-anak, yakni kenakalan. Sedangkan anak yang tidak terbina minat bacanya sejak  dini  akan menghadapi  peluang  yang  semakin kecil untuk mengembangkan pengetahuan setinggi-tingginya. Namun berdasarkan laporan _Bank Dunia_, Indonesia merupakan negara yang memiliki minat baca sangat rendah. Hal tersebut sungguh disayangkan, mengingat sebagai negara besar, Indonesia memiliki potensi besar untuk menjadi negara yang unggul.[1]
+Rendahnya minat baca di Indonesia disebabkan oleh faktor internal dan eksternal. Faktor eksternal meliputi kurangnya fasilitas dan sarana prasarana seperti kurangnya referensi/buku dan tempat untuk membaca, kurangnya[1]. Sedangkan faktor internal meliputi kurangnya minat dan motivasi, kurangnya kemampuan membaca, dan kurangnya waktu luang[3]. 
 
-Hal itu sangat berpengaruh dengan Potensi negara,terkait dengan rendahnya minat baca di Indonesia. Rendahnya minat baca masyarakat Indonesia menjadi salah satu faktor yang menyebabkan rendahnya kualitas sumber daya manusia di Indonesia. Oleh karena itu, meningkatkan minat baca masyarakat Indonesia dapat membantu meningkatkan kualitas sumber daya manusia di Indonesia dan berpotensi meningkatkan kemajuan negara.
-Dengan Sistem rekomendasi buku dapat membantu mengatasi rendahnya minat baca di Indonesia dengan cara memberikan rekomendasi buku yang sesuai dengan minat atau kesukaan pembaca.
-Hal ini dapat meningkatkan minat baca masyarakat Indonesia karena akan lebih tertarik untuk membaca buku yang sesuai dengan minat mereka
-Selain itu, sistem rekomendasi buku juga dapat membantu para pembaca untuk lebih mudah mendapatkan informasi mengenai buku yang akan dibaca. Dengan adanya sistem rekomendasi buku, para pembaca tidak perlu lagi bingung memilih buku yang ingin dibaca dan dapat lebih mudah menemukan buku yang sesuai dengan minat mereka
+Salah satu solusi untuk mengatasi rendahnya minat baca di Indonesia adalah dengan menggunakan sistem rekomendasi buku. Sistem rekomendasi buku dapat membantu meningkatkan minat baca dengan memberikan rekomendasi buku yang sesuai dengan minat dan preferensi pembaca. Sistem rekomendasi buku dapat menggunakan metode content-based filtering, yaitu dengan mempertimbangkan kesesuaian antara konten buku dengan minat dan preferensi pembaca[2]. 
+
+Dalam konteks pendidikan, guru dapat menggunakan sistem rekomendasi buku untuk membantu meningkatkan minat baca siswa. Guru dapat menggunakan sistem rekomendasi buku untuk memberikan rekomendasi buku yang sesuai dengan minat dan preferensi siswa, sehingga siswa lebih tertarik untuk membaca[5]. Selain itu, guru juga dapat memberikan penghargaan atau insentif bagi siswa yang rajin membaca, sehingga siswa lebih termotivasi untuk membaca[6].
+
+Menurut data UNESCO, minat baca masyarakat Indonesia sangat memprihatinkan, hanya 0,001%. Artinya, dari 1,000 orang Indonesia, cuma 1 orang yang rajin membaca[1][2][3]. Selain itu, Indonesia menduduki peringkat ke-60 dari 61 negara dengan tingkat literasi rendah[2]. Masyarakat Indonesia rata-rata membaca 0-1 buku setiap tahun[5].
 
 Sistem rekomendasi sendiri telah digunakan secara luas oleh hampir semua area bisnis dimana seorang konsumen memerlukan informasi untuk membuat suatu keputusan. Terdapat dua pendekatan  yang umumnya digunakan dalam membuat sitem rekomendasi, yaitu _content based filtering_ dan _collaborative filtering_. _Content based filtering_ merupakan metode yang bekerja dengan  mencari kedekatan suatu item yang akan direkomendasikan ke _user_ dengan _items_ yang  telah  diambil  oleh pengguna sebelumnya berdasarkan kemiripan antar kontennya.Namun, sistem  rekomendasi berbasis  konten  ini masih  memiliki  kelemahan,  yaitu  karena semua informasi dipilih dan direkomendasikan berdasarkan   konten,maka    pengguna    tidak    mendapatkan rekomendasi pada jenis konten yang berbeda. Selain itu, sistem rekomendasi ini kurang efektif untuk pengguna pemula, karena  pengguna yang masih pemula tidak mendapat masukan dari pengguna sebelumnya. (Li, 2002) 
 Pendekatan  lain  untuk  menutup kelemahan  dari _content  based  filtering_ dikembangkan, yaitu _collaborative filtering_. Sistem _collaborative filtering_ adalah metode yang digunakan untuk memprediksi kegunaan item berdasarkan penilaian pengguna sebelumnya. _Collaborative Filtering_ dapat digunakan untuk membuat sistem rekomendasi, akan tetapi perhitungan dalam algoritma sangat bergantung pada hasil rekomendasi. Seperti halnya skenario yang digunakan dalam perhitungan _similarity_, antara metode _pearson correlation_ dan _adjusted cosine similarity_ memberikan hasil yang berbeda. [2]
 
 ## Business Understanding
 Dampak positif dari sistem rekomendasi buku untuk pembelajaran adalah
-1.Pembelajaran meningkat dengan Sistem rekomendasi buku dapat memberikan rekomendasi yang _dipersonalisasi_ berdasarkan minat dan preferensi pengguna. Hal ini dapat membantu pelajar menemukan sumber daya yang relevan dan berkualitas tinggi sehingga menghasilkan pengalaman pembelajaran yang lebih efektif dan efisien.
-2.Dengan menyarankan buku yang sesuai dengan minat pengguna, sehingga  dapat meningkatkan keterlibatan dan motivasi untuk mengeksplorasi dan mempelajari lebih lanjut tentang pembelajaran mesin. Hal ini dapat mengarah pada pemahaman dan penguasaan subjek yang lebih dalam.
-3. sistem rekomendasi buku juga dapat membantu pengguna dengan cepat menemukan buku yang relevan dengan kebutuhan dan minat spesifik mereka. Ini menghemat waktu dibandingkan dengan mencari buku secara manual atau mengandalkan rekomendasi umum
-4. Dapat memperkenalkan pengguna pada buku-buku yang mungkin belum mereka temukan sendiri. Hal ini dapat memaparkan mereka pada perspektif, pendekatan, dan penulis berbeda di bidang pembelajaran mesin, sehingga memperluas pengetahuan dan pemahaman 
-5.Dan juga dapat mempertimbangkan gaya belajar pengguna dan merekomendasikan buku yang selaras dengan cara belajar pilihan. Pendekatan yang dipersonalisasi ini dapat meningkatkan pengalaman belajar dan memenuhi kebutuhan individu.
+1.  sistem rekomendasi buku dapat meningkatkan kinerja belajar dan kepuasan pengguna. Penelitian ini menemukan bahwa sistem rekomendasi buku dapat membantu siswa menemukan sumber daya pembelajaran yang sesuai dengan minat dan preferensi 
+2. sistem rekomendasi buku berbasis pola dapat membantu pengguna menemukan buku yang lebih terkait dan menarik. Penelitian ini menemukan bahwa sistem rekomendasi buku berbasis pola dapat membantu meningkatkan kepercayaan pengguna dan memberikan hasil rekomendasi yang lebih baik.
+3.Pembelajaran meningkat dengan Sistem rekomendasi buku dapat memberikan rekomendasi yang _dipersonalisasi_ berdasarkan minat dan preferensi pengguna. Hal ini dapat membantu pelajar menemukan sumber daya yang relevan dan berkualitas tinggi sehingga menghasilkan pengalaman pembelajaran yang lebih efektif dan efisien.
+4.Dengan menyarankan buku yang sesuai dengan minat pengguna, sehingga  dapat meningkatkan keterlibatan dan motivasi untuk mengeksplorasi dan mempelajari lebih lanjut tentang pembelajaran mesin. Hal ini dapat mengarah pada pemahaman dan penguasaan subjek yang lebih dalam.
+5. sistem rekomendasi buku juga dapat membantu pengguna dengan cepat menemukan buku yang relevan dengan kebutuhan dan minat spesifik mereka. Ini menghemat waktu dibandingkan dengan mencari buku secara manual atau mengandalkan rekomendasi umum
+5. Dapat memperkenalkan pengguna pada buku-buku yang mungkin belum mereka temukan sendiri. Hal ini dapat memaparkan mereka pada perspektif, pendekatan, dan penulis berbeda di bidang pembelajaran mesin, sehingga memperluas pengetahuan dan pemahaman 
+6.Dan juga dapat mempertimbangkan gaya belajar pengguna dan merekomendasikan buku yang selaras dengan cara belajar pilihan. Pendekatan yang dipersonalisasi ini dapat meningkatkan pengalaman belajar dan memenuhi kebutuhan individu.
+
+Berikut adalah beberapa pernyataan permasalahan yang dapat dipecahkan dengan sistem rekomendasi buku:
+Rendahnya minat baca siswa di sekolah karena kurangnya minat dan motivasi, kurangnya kemampuan membaca, dan kurangnya waktu luang
+1. Sistem rekomendasi buku dapat membantu meningkatkan minat baca siswa dengan memberikan rekomendasi buku yang sesuai dengan minat dan preferensi.
+Rendahnya minat baca masyarakat Indonesia karena kurangnya fasilitas dan sarana prasarana seperti kurangnya referensi/buku dan tempat untuk membaca, kurangnya daya tarik dan aksesibilitas terhadap buku-buku yang menarik
+2. Sistem rekomendasi buku dapat membantu meningkatkan minat baca masyarakat dengan memberikan rekomendasi buku yang sesuai dengan minat dan preferensi, serta membantu memperluas aksesibilitas terhadap buku-buku yang menarik. Rendahnya minat baca mahasiswa karena kurangnya minat dan motivasi, serta kurangnya kemampuan membaca
+3. Sistem rekomendasi buku dapat membantu meningkatkan minat baca mahasiswa dengan memberikan rekomendasi buku yang sesuai dengan minat dan preferensi, serta membantu meningkatkan kemampuan membaca melalui buku-buku yang sesuai dengan tingkat pemahaman.
+Dengan demikian, sistem rekomendasi buku dapat membantu mengatasi berbagai permasalahan rendahnya minat baca di Indonesia dengan memberikan rekomendasi buku yang sesuai dengan minat dan preferensi pembaca.
 
 ### Problem Statements
 Permasalahan yang ada dalam proyek sistem Rekomendasi Buku ini adalah
@@ -103,8 +114,13 @@ Meningkatkan jumlah data yang digunakan untuk melatih model dapat meningkatkan a
 dan juga bisa menggunakan validasi silang dapat membantu mengevaluasi performa model dan mengurangi nilai _RMSE_
 
 
-Referensi: [1.] Djamal,A Rhamadanus. Maharani, Warih dan Kurniati, Angelina Prima (2010). Analisis dan Implementasi Metode Item-Based Clustering Hybrid Pada Recomender Sytem 
-[2] Li, Qing  and  Kim, Byeong  Man  2002. An Approach for Combining Content-based  and  Collaborative Filters. Departement of Computer Sciences,Kumoh National Institute of Technology
+Referensi: 
+[1] http://jurnal.fkip.unila.ac.id/index.php/JIIP/article/download/24819/16330
+[2] https://dspace.uii.ac.id/bitstream/handle/123456789/35942/17523144%20Muhammad%20Rizqi%20Az%20Zayyad.pdf?sequence=1
+[3] https://repository.uir.ac.id/12758/1/166810812.pdf
+[4] https://www.researchgate.net/publication/320701024_Minat_Baca_Siswa_yang_Sangat_Rendah
+[5] https://jurnal.untan.ac.id/index.php/jpdpb/article/download/7360/7501
+[6] https://journal.student.uny.ac.id/ojs/index.php/fiptp/article/download/3098/2794
 
 
 **---Ini adalah bagian akhir laporan---**
