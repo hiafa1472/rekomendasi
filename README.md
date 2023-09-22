@@ -67,11 +67,18 @@ Variabel dalam kumpulan data sistem rekomendasi adalah
 - Algoritma: Algoritma digunakan untuk memproses data dan membangun model rekomendasi. 
 
 ## Data Preparation
+Untuk merasio data rating menjadi data latih dan data uji, diperlukan informasi lebih lanjut mengenai jumlah data latih dan data uji yang diinginkan. Namun, jika hanya ingin merasio data rating menjadi dua bagian dengan rasio 80:20, maka jumlah data latih sekitar 919824 dan jumlah data uji sekitar 229956.
+Caranya, jumlah data rating (1149780) dikalikan dengan rasio data latih (80%) dan rasio data uji (20%), sehingga didapatkan:
+Jumlah data latih = 1149780 x 0.8 = 919824
+Jumlah data uji = 1149780 x 0.2 = 229956
+Jumlah data latih dan data uji ini dapat disesuaikan dengan kebutuhan dan sumber daya yang tersedia.
+
 Mengecek keberadaan _missing value_,  ini dilakukan untuk memastikan apakah terdapat _missing value_ dalam dataset. Jika terdapat , langkah selanjutnya adalah membersihkan _missing value_ agar tidak mempengaruhi kualitas rekomendasi. Dalam notebook, langkah ini dilakukan dengan menggunakan fungsi _isnull()_ untuk mengecek keberadaan _missing value_, kemudian menggunakan fungsi _dropna()_ untuk membersihkan _missing value._
 Pengurutan buku berdasarkan ISBN, dilakukan untuk mengurutkan buku berdasarkan ISBN (International Standard Book Number). Pengurutan ini berguna untuk mempermudah proses rekomendasi berdasarkan kesamaan karakteristik buku.
 Memasukkan buku yang telah diurutkan ke dalam variabel _fix_ buku. Setelah dilakukan pengurutan buku berdasarkan ISBN, buku-buku tersebut dimasukkan ke dalam variabel _fix_ buku. Tujuan dari langkah ini adalah untuk mempersiapkan data buku yang akan digunakan dalam proses _modelling._
 _Duplikasi_ data yang dapat mempengaruhi kualitas rekomendasi dan menghasilkan rekomendasi yang tidak akurat. Oleh karena itu, data duplikat perlu dihapus sebelum dilakukan proses _modelling_. Dalam notebook, proses ini dilakukan pada data rating.
 dan Pembuatan _dictionary_ yang digunakan untuk menyimpan informasi tentang buku dan pengguna. _Dictionary_ ini akan digunakan dalam proses _modelling_ untuk membangun model rekomendasi. Dalam notebook, proses ini dilakukan dengan membuat _dictionary_ untuk data buku dan data pengguna.
+
 
 ## Modeling
 Mengenai cara kerja model _RecommenderNet_ yaitu 
