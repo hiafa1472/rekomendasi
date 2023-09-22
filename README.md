@@ -68,6 +68,7 @@ Variabel dalam kumpulan data sistem rekomendasi adalah
 
 ## Data Preparation
 Dalam pembuatan sistem rekomendasi buku, ada beberapa proses penting yaitu
+Proses pembagian dataset pada data preparation dilakukan dengan cara membagi dataset menjadi dua bagian, yaitu data latih (training data) dan data uji (testing data). Rasio pembagian dataset dapat bervariasi tergantung pada kebutuhan dan tujuan dari sistem rekomendasi buku yang dibuat. Beberapa rasio pembagian dataset yang umum digunakan adalah 80:20, 70:30, atau 60:40, di mana data latih digunakan untuk melatih model sistem rekomendasi buku, sedangkan data uji digunakan untuk menguji performa model yang telah dilatih
 Mengecek keberadaan _missing value_,  ini dilakukan untuk memastikan apakah terdapat _missing value_ dalam dataset. Jika terdapat , langkah selanjutnya adalah membersihkan _missing value_ agar tidak mempengaruhi kualitas rekomendasi. Dalam notebook, langkah ini dilakukan dengan menggunakan fungsi _isnull()_ untuk mengecek keberadaan _missing value_, kemudian menggunakan fungsi _dropna()_ untuk membersihkan _missing value._
 Pengurutan buku berdasarkan ISBN, dilakukan untuk mengurutkan buku berdasarkan ISBN (International Standard Book Number). Pengurutan ini berguna untuk mempermudah proses rekomendasi berdasarkan kesamaan karakteristik buku.
 Memasukkan buku yang telah diurutkan ke dalam variabel _fix_ buku. Setelah dilakukan pengurutan buku berdasarkan ISBN, buku-buku tersebut dimasukkan ke dalam variabel _fix_ buku. Tujuan dari langkah ini adalah untuk mempersiapkan data buku yang akan digunakan dalam proses _modelling._
@@ -112,6 +113,8 @@ memeriksa Outlier yang dapat mempengaruhi nilai _RMSE_ secara signifikan. Mengha
 Mencoba algoritme yang berbeda juga dapat membantu menemukan algoritme yang paling sesuai untuk masalah tertentu dan mengurangi nilai _RMSE_
 Meningkatkan jumlah data yang digunakan untuk melatih model dapat meningkatkan akurasinya dan mengurangi nilai _RMSE_
 dan juga bisa menggunakan validasi silang dapat membantu mengevaluasi performa model dan mengurangi nilai _RMSE_
+Gambar (2)  gambar hasil grafik plot ![image](![Screenshot 2023-09-22 092400](https://github.com/hiafa1472/rekomendasi/assets/103301400/55f13249-c558-4a1f-a22e-b0627becdd5f)
+)
 
 
 Referensi: 
