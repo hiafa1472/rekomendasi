@@ -67,8 +67,6 @@ Variabel dalam kumpulan data sistem rekomendasi adalah
 - Algoritma: Algoritma digunakan untuk memproses data dan membangun model rekomendasi. 
 
 ## Data Preparation
-Dalam pembuatan sistem rekomendasi buku, ada beberapa proses penting yaitu
-Proses pembagian dataset pada data preparation dilakukan dengan cara membagi dataset menjadi dua bagian, yaitu data latih (training data) dan data uji (testing data). Rasio pembagian dataset dapat bervariasi tergantung pada kebutuhan dan tujuan dari sistem rekomendasi buku yang dibuat. Beberapa rasio pembagian dataset yang umum digunakan adalah 80:20, 70:30, atau 60:40, di mana data latih digunakan untuk melatih model sistem rekomendasi buku, sedangkan data uji digunakan untuk menguji performa model yang telah dilatih
 Mengecek keberadaan _missing value_,  ini dilakukan untuk memastikan apakah terdapat _missing value_ dalam dataset. Jika terdapat , langkah selanjutnya adalah membersihkan _missing value_ agar tidak mempengaruhi kualitas rekomendasi. Dalam notebook, langkah ini dilakukan dengan menggunakan fungsi _isnull()_ untuk mengecek keberadaan _missing value_, kemudian menggunakan fungsi _dropna()_ untuk membersihkan _missing value._
 Pengurutan buku berdasarkan ISBN, dilakukan untuk mengurutkan buku berdasarkan ISBN (International Standard Book Number). Pengurutan ini berguna untuk mempermudah proses rekomendasi berdasarkan kesamaan karakteristik buku.
 Memasukkan buku yang telah diurutkan ke dalam variabel _fix_ buku. Setelah dilakukan pengurutan buku berdasarkan ISBN, buku-buku tersebut dimasukkan ke dalam variabel _fix_ buku. Tujuan dari langkah ini adalah untuk mempersiapkan data buku yang akan digunakan dalam proses _modelling._
